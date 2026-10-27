@@ -144,13 +144,11 @@ function chooseBlock(type) {
 document.querySelectorAll('.slot').forEach(slot => {
   slot.addEventListener('click', () => chooseBlock(slot.dataset.type));
 });
-document.querySelector('#startButton').addEventListener('click', () => {
-  renderer.domElement.requestPointerLock();
+renderer.domElement.addEventListener('click', () => {
+  if (!pointerLocked) renderer.domElement.requestPointerLock();
 });
 document.addEventListener('pointerlockchange', () => {
   pointerLocked = document.pointerLockElement === renderer.domElement;
-  document.querySelector('#overlay').classList.toggle('hidden', pointerLocked);
-  if (!pointerLocked) document.querySelector('.panel p.small').textContent = 'Click Play to resume. Press Esc to release the mouse.';
 });
 document.addEventListener('mousemove', event => {
   if (!pointerLocked) return;
