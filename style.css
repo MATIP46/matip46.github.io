@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; font-family: system-ui, sans-serif; }
+body { background: #87c9f5; color: white; }
+canvas { display: block; width: 100%; height: 100%; }
+#overlay { position: fixed; inset: 0; display: grid; place-items: center; z-index: 10; background: #101923a8; }
+#overlay.hidden { display: none; }
+.panel { width: min(92vw, 480px); padding: 28px; border-radius: 14px; background: #17222eee; box-shadow: 0 16px 55px #0008; text-align: center; }
+h1 { margin: 0 0 8px; }
+p { line-height: 1.5; }
+button { cursor: pointer; font: inherit; }
+#startButton { border: 0; border-radius: 8px; padding: 10px 30px; background: #61b84c; color: white; font-weight: 700; }
+#startButton:hover { background: #4d9e3b; }
+.small { font-size: 12px; opacity: .8; }
+#hud { position: fixed; inset: 0; pointer-events: none; }
+#crosshair { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -52%); font-size: 28px; font-weight: 300; text-shadow: 1px 1px 2px #000; }
+#status { position: absolute; left: 12px; top: 12px; padding: 6px 10px; border-radius: 6px; background: #0006; font-size: 13px; }
+#hotbar { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; }
+.slot { width: 78px; height: 72px; position: relative; border: 2px solid #ffffff80; border-radius: 5px; background: #1c2538c9; color: white; pointer-events: auto; display: grid; place-items: center; padding: 4px; }
+.slot.selected { border-color: white; background: #52677edb; box-shadow: 0 0 0 2px #0006; }
+.slot > span:nth-child(2) { position: absolute; left: 5px; top: 1px; font-size: 12px; }
+.slot small { font-size: 10px; }
+.swatch { width: 22px; height: 22px; display: block; border: 2px solid #0004; box-shadow: inset -4px -4px #0002, inset 3px 3px #fff2; }
+.swatch.grass { background: #69ad45; }
+.swatch.dirt { background: #8a5a35; }
+.swatch.stone { background: #888d94; }
