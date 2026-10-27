@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voxel Sandbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hud">
+    <div id="crosshair">+</div>
+    <div id="status">Click Play to begin</div>
+    <div id="hotbar" aria-label="Block selection">
+      <button class="slot selected" data-type="grass"><span class="swatch grass"></span><span>1</span><small>Grass</small></button>
+      <button class="slot" data-type="dirt"><span class="swatch dirt"></span><span>2</span><small>Dirt</small></button>
+      <button class="slot" data-type="stone"><span class="swatch stone"></span><span>3</span><small>Stone</small></button>
+    </div>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
